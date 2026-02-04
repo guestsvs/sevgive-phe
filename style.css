@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   color: #fff;
   background: #000;
 }
@@ -24,51 +24,55 @@ body {
   gap:20px;
   background: rgba(0,0,0,0.7);
   z-index:50;
-  font-size:1.8rem;
+  font-size:2rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   user-select: none;
+  padding: 20px;
+  text-align: center;
 }
 
 #startScreen button {
-  padding:15px 40px;
-  font-size:1.2rem;
+  padding:18px 50px;
+  font-size:1.4rem;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:white;
   cursor:pointer;
   transition: background-color 0.3s ease;
 }
 
-#startScreen button:hover { opacity:0.8; }
+#startScreen button:hover { opacity:0.85; }
 
 #content {
   position: relative; z-index:10;
   display:flex; flex-direction:column; align-items:center;
-  justify-content:center; height:100vh; gap:20px;
+  justify-content:center; min-height:100vh; gap:25px;
   text-align:center;
-  overflow: hidden;
+  padding: 10px;
 }
 
 #baslik {
-  padding:20px 30px;
+  padding:20px 25px;
   border-radius:12px;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  font-size:2rem;
   animation: fadeDown 1s forwards;
 }
 
 #butonContainer, #eminBtnContainer {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 button {
-  padding:15px 30px;
-  font-size:18px;
+  padding:15px 25px;
+  font-size:1.4rem;
   border:none;
   border-radius:12px;
   cursor:pointer;
@@ -84,13 +88,13 @@ button:hover {
 }
 
 #siirContainer {
-  padding: 30px 40px;
+  padding: 25px 30px;
   border-radius:12px;
   background: linear-gradient(135deg,#0f2027,#2c5364);
   box-shadow: 0 0 20px rgba(0,0,0,0.7);
   font-family: 'Merriweather', serif;
-  font-size: 2rem;
-  line-height: 1.6;
+  font-size:1.6rem;
+  line-height: 1.5;
   text-align: center;
   color: #f0f0f0;
   opacity:0;
@@ -100,11 +104,10 @@ button:hover {
 
 #sonrakiBtn {
   margin-top:20px;
-  font-size: 1.8rem;
-  padding: 10px 25px;
+  font-size:1.6rem;
+  padding: 10px 20px;
   border-radius: 12px;
   background: linear-gradient(135deg,#3a6073,#1f3c59);
-  cursor:pointer;
 }
 
 #seniSeviyorumContainer {
@@ -115,26 +118,28 @@ button:hover {
   z-index:20;
   opacity:0;
   transition: opacity 1s ease;
+  padding: 15px;
 }
 
 #sevgiKutusu {
-  padding:40px 60px;
+  padding:30px 40px;
   border-radius:12px;
   background: linear-gradient(135deg,#0f2027,#2c5364);
   box-shadow:0 0 20px rgba(0,0,0,0.7);
   display:flex; flex-direction:column;
   align-items:center;
-  gap:20px;
+  gap:15px;
   animation: wave 4s ease-in-out infinite alternate;
 }
 
 #sevgiKutusu h1 {
   margin:0;
   text-align:center;
+  font-size:2rem;
 }
 
 #geriBtn {
-  font-size:1.5rem;
+  font-size:1.4rem;
   padding:10px 20px;
   border-radius:8px;
   cursor:pointer;
@@ -161,7 +166,7 @@ button:hover {
 #audioControl button:active { transform: scale(0.9); }
 
 #sarkiIsmi {
-  font-weight:600; font-size:18px; color:#fff;
+  font-weight:600; font-size:16px; color:#fff;
   user-select:none; white-space:nowrap;
 }
 
@@ -170,4 +175,23 @@ button:hover {
   0% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
+}
+
+/* Responsive Mobil ayarları */
+@media (max-width:768px) {
+  #baslik { font-size:1.8rem; padding:15px 20px; }
+  button { font-size:1.3rem; padding:12px 20px; }
+  #siirContainer { font-size:1.4rem; padding:20px 25px; }
+  #sonrakiBtn { font-size:1.5rem; padding:8px 18px; }
+  #sevgiKutusu { padding:25px 30px; }
+  #sevgiKutusu h1 { font-size:1.8rem; }
+}
+
+@media (max-width:480px) {
+  #baslik { font-size:1.6rem; padding:12px 15px; }
+  button { font-size:1.2rem; padding:10px 18px; }
+  #siirContainer { font-size:1.3rem; padding:15px 20px; }
+  #sonrakiBtn { font-size:1.4rem; padding:6px 15px; }
+  #sevgiKutusu { padding:20px 25px; }
+  #sevgiKutusu h1 { font-size:1.6rem; }
 }
