@@ -2,11 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🤍</title>
+  <title>🤍</title> <!-- Sayfa başlığı artık sadece beyaz kalp -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="white-heart.png" />
+
+  <!-- Beyaz kalp favicon olarak -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2224%22>🤍</text></svg>" type="image/svg+xml">
 </head>
 <body>
 
@@ -46,7 +47,7 @@
   <!-- Seni Seviyorum ekranı -->
   <div id="seniSeviyorumContainer" class="hidden">
     <div id="sevgiKutusu">
-      <h1>Seni Seviyorum 🤍</h1>
+      <h1>🤍</h1> <!-- Beyaz kalp başlık olarak -->
       <button id="geriBtn">← Geri</button>
     </div>
   </div>
@@ -54,4 +55,9 @@
   <!-- Ses kontrol -->
   <div id="audioControl" class="hidden">
     <button id="sesToggleBtn">▶️</button>
-    <span
+    <span id="sarkiIsmi">Remembrance - Balmorhea</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
