@@ -87,16 +87,19 @@ button:hover {
   box-shadow: 0 0 25px rgba(0,255,255,0.5);
 }
 
+/* Şiir container güncellendi */
 #siirContainer {
-  padding: 25px 30px;
+  padding: 20px 20px;
   border-radius:12px;
   background: linear-gradient(135deg,#0f2027,#2c5364);
   box-shadow: 0 0 20px rgba(0,0,0,0.7);
   font-family: 'Merriweather', serif;
-  font-size:1.6rem;
-  line-height: 1.5;
+  font-size:1.4rem;
+  line-height: 1.4;
   text-align: center;
   color: #f0f0f0;
+  max-height: 60vh;
+  overflow-y: auto;
   opacity:0;
   transform: translateY(50px);
   transition: all 1s ease;
@@ -181,7 +184,7 @@ button:hover {
 @media (max-width:768px) {
   #baslik { font-size:1.8rem; padding:15px 20px; }
   button { font-size:1.3rem; padding:12px 20px; }
-  #siirContainer { font-size:1.4rem; padding:20px 25px; }
+  #siirContainer { font-size:1.3rem; padding:15px 15px; max-height:55vh; }
   #sonrakiBtn { font-size:1.5rem; padding:8px 18px; }
   #sevgiKutusu { padding:25px 30px; }
   #sevgiKutusu h1 { font-size:1.8rem; }
@@ -190,7 +193,7 @@ button:hover {
 @media (max-width:480px) {
   #baslik { font-size:1.6rem; padding:12px 15px; }
   button { font-size:1.2rem; padding:10px 18px; }
-  #siirContainer { font-size:1.3rem; padding:15px 20px; }
+  #siirContainer { font-size:1.2rem; padding:12px 12px; max-height:50vh; }
   #sonrakiBtn { font-size:1.4rem; padding:6px 15px; }
   #sevgiKutusu { padding:20px 25px; }
   #sevgiKutusu h1 { font-size:1.6rem; }
