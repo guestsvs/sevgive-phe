@@ -21,7 +21,6 @@ muzik.volume = 0.3;
 startBtn.addEventListener("click", () => {
   muzik.play();
   sesToggleBtn.textContent = "⏸️";
-
   startScreen.classList.add("hidden");
   content.classList.remove("hidden");
   audioControl.classList.remove("hidden");
@@ -44,9 +43,7 @@ evetBtn.addEventListener("click", () => {
 // EMİNİM basınca
 eminBtn.addEventListener("click", () => {
   eminBtnContainer.style.display = "none";
-
   baslik.textContent = "Şüphe ve Sevgi";
-
   siirContainer.innerHTML = `
 <p style="white-space: pre-line;">
 Şüphe, sevginin üstüne düşen ilk gölgedir.
