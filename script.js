@@ -1,26 +1,28 @@
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+const content = document.getElementById("content");
+const audioControl = document.getElementById("audioControl");
+
+const muzik = document.getElementById("muzik");
+muzik.volume = 0.3;
+
 const evetBtn = document.getElementById("evetBtn");
 const hayirBtn = document.getElementById("hayirBtn");
 const eminBtn = document.getElementById("eminBtn");
 const eminBtnContainer = document.getElementById("eminBtnContainer");
-const siirContainer = document.getElementById("siirContainer");
 const baslik = document.getElementById("baslik");
+const siirContainer = document.getElementById("siirContainer");
 const sonrakiBtn = document.getElementById("sonrakiBtn");
+
 const seniSeviyorumContainer = document.getElementById("seniSeviyorumContainer");
 const geriBtn = document.getElementById("geriBtn");
 const sesToggleBtn = document.getElementById("sesToggleBtn");
-const muzik = document.getElementById("muzik");
 
-const startScreen = document.getElementById("startScreen");
-const startBtn = document.getElementById("startBtn");
-const content = document.getElementById("content");
-const audioControl = document.getElementById("audioControl");
-
-muzik.volume = 0.3;
-
-// Başlat
+// Başlat butonu
 startBtn.addEventListener("click", () => {
   muzik.play();
   sesToggleBtn.textContent = "⏸️";
+
   startScreen.classList.add("hidden");
   content.classList.remove("hidden");
   audioControl.classList.remove("hidden");
