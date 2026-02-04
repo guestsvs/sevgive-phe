@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kırgınlık Teması</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Arka plan videosu -->
+  <video autoplay loop muted id="bgVideo">
+    <source src="video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Müzik -->
+  <audio id="muzik" loop>
+    <source src="remembrance.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Başlangıç ekranı -->
+  <div id="startScreen">
+    <h2>Önce şarkıyı başlat</h2>
+    <button id="startBtn">Başlat</button>
+  </div>
+
+  <!-- İçerik -->
+  <div id="content" class="hidden">
+    <!-- Beni Seviyor musun? -->
+    <div id="soruContainer">
+      <h1 id="baslik">Beni Seviyor musun?</h1>
+      <div id="butonContainer">
+        <button id="evetBtn">EVET</button>
+        <button id="hayirBtn">HAYIR</button>
+      </div>
+      <div id="eminBtnContainer" class="hidden">
+        <button id="eminBtn">Eminim</button>
+      </div>
+    </div>
+
+    <!-- Şiir -->
+    <div id="siirContainer" class="hidden"></div>
+    <button id="sonrakiBtn" class="hidden">Sonraki →</button>
+  </div>
+
+  <!-- Seni Seviyorum ekranı -->
+  <div id="seniSeviyorumContainer" class="hidden">
+    <div id="sevgiKutusu">
+      <h1>Seni Seviyorum 🤍</h1>
+      <button id="geriBtn">← Geri</button>
+    </div>
+  </div>
+
+  <!-- Ses kontrol -->
+  <div id="audioControl" class="hidden">
+    <button id="sesToggleBtn">▶️</button>
+    <span id="sarkiIsmi">Remembrance - Balmorhea</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

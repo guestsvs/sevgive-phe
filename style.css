@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  color: #fff;
+  background: #000;
+}
+
+#bgVideo {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  z-index:-1;
+  filter:brightness(0.5);
+}
+
+.hidden { display:none !important; }
+
+#startScreen {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  gap:20px;
+  background: rgba(0,0,0,0.7);
+  z-index:50;
+  font-size:1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
+#startScreen button {
+  padding:15px 40px;
+  font-size:1.2rem;
+  border:none;
+  border-radius:8px;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  cursor:pointer;
+  transition: background-color 0.3s ease;
+}
+
+#startScreen button:hover { opacity:0.8; }
+
+#content {
+  position: relative; z-index:10;
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; height:100vh; gap:20px;
+  text-align:center;
+  overflow: hidden;
+}
+
+#baslik {
+  padding:20px 30px;
+  border-radius:12px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  animation: fadeDown 1s forwards;
+}
+
+#butonContainer, #eminBtnContainer {
+  display: flex;
+  justify-content: center; /* Ortaya hizala */
+  gap: 40px; /* Butonlar arası boşluk */
+  margin-top: 20px;
+}
+
+button {
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  color:#fff;
+  transition: all 0.3s ease, transform 0.2s ease;
+  background: linear-gradient(135deg,#1f3c59,#3a6073);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,255,255,0.5);
+}
+
+#siirContainer {
+  padding: 30px 40px;
+  border-radius:12px;
+  background: linear-gradient(135deg,#0f2027,#2c5364);
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #f0f0f0;
+  opacity:0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+#sonrakiBtn {
+  margin-top:20px;
+  font-size: 1.8rem;
+  padding: 10px 25px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#3a6073,#1f3c59);
+  cursor:pointer;
+}
+
+#seniSeviyorumContainer {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  display:flex; justify-content:center; align-items:center;
+  z-index:20;
+  opacity:0;
+  transition: opacity 1s ease;
+}
+
+#sevgiKutusu {
+  padding:40px 60px;
+  border-radius:12px;
+  background: linear-gradient(135deg,#0f2027,#2c5364);
+  box-shadow:0 0 20px rgba(0,0,0,0.7);
+  display:flex; flex-direction:column;
+  align-items:center;
+  gap:20px;
+  animation: wave 4s ease-in-out infinite alternate;
+}
+
+#sevgiKutusu h1 {
+  margin:0;
+  text-align:center;
+}
+
+#geriBtn {
+  font-size:1.5rem;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  background: linear-gradient(135deg,#3a6073,#1f3c59);
+}
+
+#audioControl {
+  position: fixed; bottom:20px; left:50%;
+  transform:translateX(-50%);
+  z-index:30;
+  background: rgba(0,0,0,0.5);
+  padding:8px 20px;
+  border-radius:30px;
+  box-shadow:0 0 10px rgba(255,255,255,0.3);
+  display:flex; align-items:center; gap:12px;
+}
+
+#audioControl button {
+  background:transparent; border:none;
+  font-size:24px; color:#fff; cursor:pointer;
+  outline:none; user-select:none;
+  transition: transform 0.2s ease;
+}
+#audioControl button:active { transform: scale(0.9); }
+
+#sarkiIsmi {
+  font-weight:600; font-size:18px; color:#fff;
+  user-select:none; white-space:nowrap;
+}
+
+@keyframes fadeDown { to { opacity:1; transform:translateY(0); } }
+@keyframes wave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
